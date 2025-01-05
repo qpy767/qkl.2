@@ -1,0 +1,177 @@
+/* 容器样式 */
+.import-issue-container {
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  gap: 20px; /* 子元素之间的间距 */
+  flex-wrap: wrap; /* 允许子元素在小屏幕上换行 */
+  padding: 20px 0; /* 给上下留出一些空间 */
+}
+
+.import-issue-container section {
+  flex: 1 1 calc(50% - 10px); /* 确保每个section占据一半宽度并考虑gap */
+  max-width: calc(50% - 10px); /* 防止section过大 */
+  min-width: 300px; /* 设置最小宽度 */
+  text-align: center; /* 内部文本和按钮居中 */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.import-issue-container h3 {
+  margin-top: 0; /* 移除顶部边距 */
+}
+
+.import-issue-container input, 
+.import-issue-container button {
+  display: block;
+  margin: 10px auto; /* 将input和button居中 */
+  width: 80%; /* 控制输入框和按钮的宽度 */
+}
+/* 固定的导航栏 */
+.App .navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* 固定位置 */
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* 确保它在其他内容之上 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px; /* 设置固定高度 */
+}
+
+/* 导航栏内的无序列表样式 */
+.App .navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+  height: 100%; /* 继承父级的高度 */
+}
+
+/* 导航栏内的列表项样式 */
+.App .navbar li {
+  margin: 0 15px; /* 给每个链接之间添加间距 */
+}
+
+/* 导航栏内的链接样式 */
+.App .navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  line-height: normal; /* 确保文本行高正常 */
+}
+
+.App .navbar li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* 内容区样式 */
+.App .content {
+  padding-top: 70px; /* 为内容留出顶部空间，避免被固定的头部遮挡 */
+}
+
+/* 其他原有的样式保持不变 */
+/* App容器样式 */
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f6f9;
+}
+
+/* Header容器样式 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* NFT画廊容器样式 */
+.nft-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 每个NFT项的卡片样式 */
+.listBox {
+  width: 200px;
+  height: 300px;
+  box-shadow: 0 0 5px lightgray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.listBox .listImg {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.listBox .listImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.listBox .listTitle {
+  width: calc(100% - 10px);
+  padding: 3px 3px;
+  height: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.listBox .listRemark {
+  width: calc(100% - 10px);
+  padding: 0 5px;
+  margin:  0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+}
+
+.listBox .listBtnBox {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.listBox .listBtnBox button {
+  height: 35px;
+  width: 80%;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.listBox .listBtnBox button:disabled {
+  background-color: #ddd;
+}
